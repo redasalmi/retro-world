@@ -9,8 +9,8 @@ ReactDOM.createRoot(document.querySelector('#app')).render(
         <Route
           path="/"
           element={
-            <div>
-              <h1>Hello React!</h1>
+            <div className="flex h-screen justify-center items-center">
+              <h1 className="text-2xl">Hello React!</h1>
             </div>
           }
         />

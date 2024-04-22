@@ -26,7 +26,7 @@
  * ```
  */
 
-import './index.css';
+import './tailwind.css';
 import './app.tsx';
 
 console.log(
