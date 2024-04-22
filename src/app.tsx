@@ -1,5 +1,20 @@
-import { createRoot } from 'react-dom/client';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom/client';
+import { MemoryRouter, Routes, Route } from 'react-router-dom';
 
-const app = document.querySelector('#app');
-const root = createRoot(app);
-root.render(<h2>Hello from React!</h2>);
+ReactDOM.createRoot(document.querySelector('#app')).render(
+  <React.StrictMode>
+    <MemoryRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div>
+              <h1>Hello React!</h1>
+            </div>
+          }
+        />
+      </Routes>
+    </MemoryRouter>
+  </React.StrictMode>,
+);
