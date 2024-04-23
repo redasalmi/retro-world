@@ -4,16 +4,16 @@ import { rules } from './webpack.rules';
 import { plugins } from './webpack.plugins';
 
 rules.push({
-  test: /\.css$/i,
-  use: ['style-loader', 'css-loader', 'postcss-loader'],
+	test: /\.css$/i,
+	use: ['style-loader', 'css-loader', 'postcss-loader'],
 });
 
 export const rendererConfig: Configuration = {
-  module: {
-    rules,
-  },
-  plugins,
-  resolve: {
-    extensions: ['.js', '.ts', '.jsx', '.tsx', '.css'],
-  },
+	module: {
+		rules,
+	},
+	plugins,
+	resolve: {
+		extensions: ['.js', '.ts', '.jsx', '.tsx', '.css'],
+	},
 };
