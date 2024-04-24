@@ -3,6 +3,14 @@ import * as ReactDOM from 'react-dom/client';
 import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import Home from './views/home';
 
+declare global {
+	interface Window {
+		API: {
+			test: () => Promise<void>;
+		};
+	}
+}
+
 ReactDOM.createRoot(document.querySelector('#app')).render(
 	<React.StrictMode>
 		<MemoryRouter>
