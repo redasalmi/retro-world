@@ -4,7 +4,12 @@ import { contextBridge, ipcRenderer } from 'electron';
 
 contextBridge.exposeInMainWorld('API', {
 	test: async () => {
-		const result = await ipcRenderer.invoke('ls');
+		const result = await ipcRenderer.invoke('test');
+
+		return result;
+	},
+	isEmulatorInstalled: async (emulatorId: string) => {
+		const result = await ipcRenderer.invoke('isEmulatorInstalled', emulatorId);
 
 		return result;
 	},

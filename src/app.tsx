@@ -7,6 +7,7 @@ declare global {
 	interface Window {
 		API: {
 			test: () => Promise<void>;
+			isEmulatorInstalled: (emulatorId: string) => Promise<boolean>;
 		};
 	}
 }

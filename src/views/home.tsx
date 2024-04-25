@@ -1,6 +1,11 @@
+import { emulators } from '../lib/emulators';
+
 export default function Home() {
 	const handleClick = async () => {
-		console.log(await window.API.test());
+		const isInstalled = await window.API.isEmulatorInstalled(
+			emulators.sony.playstation1[0],
+		);
+		console.log({ isInstalled });
 	};
 
 	return (
