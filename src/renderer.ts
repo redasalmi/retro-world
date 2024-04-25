@@ -27,7 +27,7 @@
  */
 
 import './tailwind.css';
-import './app';
+import './client';
 
 console.log(
 	'👋 This message is being logged by "renderer.js", included via webpack',

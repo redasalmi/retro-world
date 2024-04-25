@@ -40,7 +40,7 @@ app.on('ready', () => {
 	});
 
 	ipcMain.handle('isEmulatorInstalled', (_, emulatorId: string) => {
-		const flatpak = spawnSync('flatpak', ['list']);
+		const flatpak = spawnSync('flatpak', ['list', '--columns', 'application']);
 		const grep = spawnSync('grep', [emulatorId], { input: flatpak.stdout });
 
 		return Boolean(grep.stdout.length);
